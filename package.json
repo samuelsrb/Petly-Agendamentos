@@ -1,4 +1,7 @@
 {
+  "name": "petly",
+  "description": "Web application for scheduling appointments at the pet shop.",
+  "author": "Samuel Soares",
   "scripts": {
     "server": "json-server --watch server.json --port 3333"
   },
