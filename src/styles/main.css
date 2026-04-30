@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Catamaran', sans-serif;
 }
 
 body {
@@ -14,28 +14,28 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #1a1a1a;
-  color: white;
 }
 
 .main-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 75rem;
   height: 80vh;
   display: flex;
   background-color: #202024;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .appointment-form {
   flex: 0 0 60%; 
-  padding: 40px;
+  padding: 2.5rem;
   overflow-y: auto; 
+  border-right: 1px solid #323238;
 }
 
 .schedule-sidebar {
   flex: 0 0 40%;
-  padding: 40px;
+  padding: 2.5rem;
   background-color: #29292e;
   overflow-y: auto;
 }
