@@ -1,13 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Petly</title>
-  <link rel="stylesheet" href="src/style.css">
-</head>
-<body>
-  
-  <script src="src/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petly</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <form class="appointment-form">
+        <header>
+          <h1>Crie um agendamento</h1>
+          <p>
+            Selecione data, horário e informe o nome do cliente para criar o
+            agendamento
+          </p>
+        </header>
+
+        <label for="date" class="field-lable">Date</label>
+        <div class="input-wrapper">
+          <i alt="Calendar"></i>
+          <input type="date" id="appointment-date" name="date" required />
+        </div>
+
+        <span class="field-label">Horários Disponiveis</span>
+            <ul id="time-slots" class="time-slots-list" aria-label="Morning available slots">
+              <li data-period="morning" class="hour-period">Manhã</li>
+              <li data-period="morning" value="09:00" class="hour hour-available">09:00</li>
+
+              <li data-period="morning" class="hour-period">Tarde</li>
+              <li data-period="afternoon" value="13:00" class="hour hour-unavailable">13:00</li>
+
+              <li data-period="morning" class="hour-period">Noite</li>
+              <li data-period="night" value="19:00" class="hour hour-available">19:00</li>
+          </ul>
+
+          <label for="owner-name" class="field-label">Pet Owner</label>
+          <div class="input-wrapper">
+          <i><img src="" alt="Person" /></i>
+          <input
+            type="text"
+            id="owner-name"
+            name="client"
+            placeholder="Owner's name"
+            required
+          />
+
+          <button type="submit" class="primary-button">Agendar</button>
+        </div>
+      </form>
+
+      <aside class="schedule-sidebar">
+        <header>
+          <h1>Agendamentos</h1>
+          <p>Visualize os agendamentos de acordo com o dia selecionado</p>
+        </header>
+
+        <section class="period-section">
+          <header>
+            <img src="" alt="Manhã" />
+            <strong>Manhã</strong>
+            <span>09h-12h</span>
+          </header>
+          <ul id="morning-list" class="appointments-list">
+            </ul>
+        </section>
+
+        <section class="period-section">
+          <header>
+            <img src="" alt="Tarde" />
+            <strong>Tarde</strong>
+            <span>13h-18h</span>
+          </header>
+          <ul id="afternoon-list" class="appointments-list">
+            </ul>
+        </section>
+
+        <section class="period-section">
+          <header>
+            <img src="" alt="Noite" />
+            <strong>Noite</strong>
+            <span>19h-21h</span>
+          </header>
+          <ul id="night-list" class="appointments-list">
+            </ul>
+        </section>
+      </aside>
+
+    </div>
+
+    <script src="src/main.js"></script>
+  </body>
 </html>
