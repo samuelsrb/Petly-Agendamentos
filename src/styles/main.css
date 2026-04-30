@@ -1,0 +1,41 @@
+@import url(./form.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh;
+  display: flex;
+  background-color: #202024;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.appointment-form {
+  flex: 0 0 60%; 
+  padding: 40px;
+  overflow-y: auto; 
+}
+
+.schedule-sidebar {
+  flex: 0 0 40%;
+  padding: 40px;
+  background-color: #29292e;
+  overflow-y: auto;
+}
